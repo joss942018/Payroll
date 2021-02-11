@@ -1,0 +1,58 @@
+{
+    "name": "cleaniquecoders/open-payroll",
+    "description": "Built with Laravel Standalone Package Creator",
+    "keywords": ["package", "laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nasrul Hazim",
+            "email": "nasrulhazim.m@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CleaniqueCoders\\OpenPayroll\\": "src/"
+        },
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "files": [
+            "src/Support/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CleaniqueCoders\\OpenPayroll\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.1",
+        "cleaniquecoders/blueprint-macro": "^2.2",
+        "cleaniquecoders/laravel-helper": "^1.1",
+        "cleaniquecoders/laravel-observers": "^1.1",
+        "cleaniquecoders/money-wrapper": "^1.1",
+        "cleaniquecoders/profile": "^1.2",
+        "illuminate/support": "^5.5|^5.6|^5.7"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "3.5.*|3.6.*|3.7.*",
+        "phpunit/phpunit": "^6.5|^7.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CleaniqueCoders\\OpenPayroll\\OpenPayrollServiceProvider"
+            ],
+            "aliases": {
+                "OpenPayroll": "CleaniqueCoders\\OpenPayroll\\OpenPayrollFacade"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
